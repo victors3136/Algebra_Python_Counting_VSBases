@@ -4,7 +4,7 @@ Small python script that generates and counts the number of bases for vector spa
 For a given n, if n <= 4, write all the possible basses of the (Z_2)^n vector space over Z_2. If n > 4, write the number of bases.
 # Approach
 This approach uses backtracking and the fact that any number <= 2^n can be written as a series of bits, which in turn can be interpreted as vectors belonging to (Z_2)^n.  
-We use a simple backtracking algorithm to generate all lists of n numbers smaller or equal to 2^n and then check their linear independence using the bitwise xor operator, which describes Z_2 addition better than + does.  
+We use a simple backtracking algorithm to generate lists of n numbers smaller or equal to 2^n and while checking their linear independence using the bitwise xor operator, which describes Z_2 addition better than + does.  
 The formula for the actual number of bases when the numbers get higher than 4 is  
 N = ∏(of k=1,n) ​(2^n−2^(k−1)) = ∏(of k=0,n-1) ​(2^n−2^k)  
 The actual proof by induction is included in a handwritten pdf file in this project.
