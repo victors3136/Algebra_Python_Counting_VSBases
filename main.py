@@ -2,7 +2,7 @@ INPUT_FILES = ["input_1.txt", "input_2.txt", "input_3.txt", "input_4.txt", "inpu
 OUTPUT_FILES = ["output_1.txt", "output_2.txt", "output_3.txt", "output_4.txt", "output_5.txt"]
 
 
-def number_of_bases(number_of_dimensions) -> int:
+def number_of_bases(number_of_dimensions: int) -> int:
     if number_of_dimensions <= 0:
        raise ValueError()
     product: int = 1
@@ -14,7 +14,7 @@ def number_of_bases(number_of_dimensions) -> int:
     return product
 
 
-def output_solution(found_solution, number_of_dimensions, out):
+def output_solution(found_solution: list[int], number_of_dimensions: int, out):
     format_specifier: str = "{0:0" + str(number_of_dimensions) + "b}"
     matrix: list[list[str]] = [list(format_specifier.format(vector)) for vector in found_solution]
     for index in range(number_of_dimensions):
@@ -30,7 +30,7 @@ def bitwise_added_pairs_of_vectors(list_of_vectors: list[int], length: int):
             for j in range(i + 1, length)}
 
 
-def is_linearly_independent(list_of_vectors, number_of_dimensions) -> bool:
+def is_linearly_independent(list_of_vectors: list[int], number_of_dimensions: int) -> bool:
     if len(list_of_vectors) == 0:
         return True
     if list_of_vectors[-1] == 0:
@@ -55,7 +55,7 @@ def is_linearly_independent(list_of_vectors, number_of_dimensions) -> bool:
             return len(list_of_vectors) <= number_of_dimensions
 
 
-def generate_possible_bases(number_of_dimensions, out):
+def generate_possible_bases(number_of_dimensions: int, out):
     possible_solution: list[int] = [0]
     while len(possible_solution) > 0:
         linearly_independent: bool = False
