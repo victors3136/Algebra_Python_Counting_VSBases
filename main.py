@@ -8,7 +8,7 @@ def number_of_bases(number_of_dimensions: int) -> int:
     product: int = 1
     two_to_n: int = 2 ** number_of_bases
     current: int = 1
-    for index in range(number_of_dimensions):
+    while current < two_to_n:
         product *= two_to_n - current
         current *= 2
     return product
