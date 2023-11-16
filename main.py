@@ -3,9 +3,14 @@ OUTPUT_FILES = ["output_1.txt", "output_2.txt", "output_3.txt", "output_4.txt", 
 
 
 def number_of_bases(number_of_dimensions) -> int:
+    if number_of_dimensions <= 0:
+       raise Value error()
     product: int = 1
+    two_to_n: int = 2 ** number_of_bases
+    current: int = 1
     for index in range(number_of_dimensions):
-        product *= (2 ** number_of_dimensions) - (2 ** index)
+        product *= two_to_n - current
+        current *= 2
     return product
 
 
