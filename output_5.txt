@@ -1,0 +1,2 @@
+For 5 dimensions, there are 9999360 bases.
+
