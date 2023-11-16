@@ -1,4 +1,4 @@
-# Algebra_Python_Counting_VSBases
+# Linear Algebra - Counting Vector Space Bases with Python 
 Small python script that generates and counts the number of bases for vector spaces of (Z_2)^n for different 'n's. Made as an extra project for my Linear Algebra Course during my first semester of univeristy
 # Problem Statement
 For a given n, if n <= 4, write all the possible basses of the (Z_2)^n vector space over Z_2. If n > 4, write the number of bases.
